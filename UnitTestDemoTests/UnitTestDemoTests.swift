@@ -6,6 +6,9 @@
 //  Copyright © 2017 Jony Singla. All rights reserved.
 //
 
+
+//http://www.appcoda.com/unit-testing-swift/
+
 import XCTest
 @testable import UnitTestDemo
 
@@ -14,6 +17,9 @@ class UnitTestDemoTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.mainBundle())
+        vc = storyboard.instantiateInitialViewController() as! ViewController
     }
     
     override func tearDown() {
